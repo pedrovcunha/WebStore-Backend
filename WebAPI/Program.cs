@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using WebStore.Persistence.DbContext;
 
-namespace WebAPI
+namespace WebStore.WebAPI
 {
     public class Program
     {
@@ -20,6 +20,7 @@ namespace WebAPI
                 try
                 {
                     var context = scope.ServiceProvider.GetService<StoreDbContext>();
+
                     context.Database.Migrate();
                 }
                 catch (Exception ex)

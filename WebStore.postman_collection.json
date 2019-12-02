@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "2cd5055b-224b-494d-a64a-fe1f27ac4270",
+		"name": "WebStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Basket",
+			"item": [
+				{
+					"name": "GET Baskets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44328/api/baskets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44328",
+							"path": [
+								"api",
+								"baskets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Basket",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44328/api/baskets/d28888e9-2ba9-473a-a40f-e38cb54f9b35",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44328",
+							"path": [
+								"api",
+								"baskets",
+								"d28888e9-2ba9-473a-a40f-e38cb54f9b35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Basket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Buyer\":\"John\",\n\t\"OnlineStoreDomainRegion\": \"US\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44328/api/baskets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44328",
+							"path": [
+								"api",
+								"baskets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post AddProductsIntoBasket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"Name\": \"Computer\",\n    \"Description\": \"Laptop SKY22\",\n    \"UnitPrice\": 890.1,\n    \"Category\": \"electronic\"\n  },\n  {\n    \"Name\": \"Monitor\",\n    \"Description\": \"SKYMonitor YYY\",\n    \"UnitPrice\": 150.1,\n    \"Category\": \"electronic\"\n  }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:44328/api/baskets/33fa24e5-696f-42ff-b73f-24095bbcc0b6/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44328",
+							"path": [
+								"api",
+								"baskets",
+								"33fa24e5-696f-42ff-b73f-24095bbcc0b6",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Basket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44328/api/baskets/33fa24e5-696f-42ff-b73f-24095bbcc0b6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44328",
+							"path": [
+								"api",
+								"baskets",
+								"33fa24e5-696f-42ff-b73f-24095bbcc0b6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HEAD Baskets",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44328/api/baskets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44328",
+							"path": [
+								"api",
+								"baskets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OPTIONS Baskets",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44328/api/baskets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44328",
+							"path": [
+								"api",
+								"baskets"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Product",
+			"item": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
