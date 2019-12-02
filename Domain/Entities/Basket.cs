@@ -7,6 +7,8 @@ namespace WebStore.Domain.Entities
     {
         public Guid Id { get; set; }
         public DateTime CreatedOn { get; set; }
-        public ICollection<Product> Products { get; private set; }
+        public string Buyer { get; set; }
+        public string OnlineStoreDomainRegion { get; set; }
+        public virtual ICollection<Product> Products { get; private set; }
     }
 }
