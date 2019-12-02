@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebStore.Persistence.DbContext;
 
 namespace WebStore.Persistence.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    partial class StoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191202142427_MappingSettings")]
+    partial class MappingSettings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,7 +95,7 @@ namespace WebStore.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("BasketId")
+                    b.Property<Guid>("BasketId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Category")
@@ -122,7 +124,7 @@ namespace WebStore.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("89f811c6-e431-479f-829a-58848a5b5c61"),
+                            Id = new Guid("f9b58d9c-ec75-4763-b8ee-1af45d3ad634"),
                             BasketId = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                             Category = "Liquor",
                             Description = "Cabernet Sauvignon",
@@ -131,7 +133,7 @@ namespace WebStore.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0bf3112b-9aad-4eed-a867-6f866fbb1900"),
+                            Id = new Guid("02d0ddea-d910-4e3e-aa2d-ff26393e4ba3"),
                             BasketId = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                             Category = "Liquor",
                             Description = "Shiraz",
@@ -140,7 +142,7 @@ namespace WebStore.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("289fa3ae-49de-4e5c-ae2b-56205f877965"),
+                            Id = new Guid("844f8afb-53b9-4a03-877c-81ca56b8aff6"),
                             BasketId = new Guid("d28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                             Category = "Liquor",
                             Description = "Cabernet Sauvignon",
@@ -149,7 +151,7 @@ namespace WebStore.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("11b6e96d-5fd5-4bbb-9b9b-40ab0057c820"),
+                            Id = new Guid("bfc15e18-553e-492d-881b-3034bad8ef23"),
                             BasketId = new Guid("da2fd609-d754-4feb-8acd-c4f9ff13ba96"),
                             Category = "Liquor",
                             Description = "Pinot Noir",
@@ -158,7 +160,7 @@ namespace WebStore.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5f6a20b9-b371-434b-99df-3a90907afeb1"),
+                            Id = new Guid("f1c14ea7-7788-4a56-9b1c-a178bdc926ee"),
                             BasketId = new Guid("da2fd609-d754-4feb-8acd-c4f9ff13ba96"),
                             Category = "Liquor",
                             Description = "Pinot Noir",

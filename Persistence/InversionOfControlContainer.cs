@@ -12,10 +12,8 @@ namespace WebStore.Persistence
             var connectionString = configuration.GetConnectionString("WebStoreDatabase");
 
             services.AddDbContext<StoreDbContext>(options =>
-                options.UseSqlServer(connectionString));
-
-            //services.AddScoped<StoreDbContext>(provider => provider.GetService<StoreDbContext>());
-
+                options.UseLazyLoadingProxies().UseSqlServer(connectionString));
+            
             return services;
         }
     }

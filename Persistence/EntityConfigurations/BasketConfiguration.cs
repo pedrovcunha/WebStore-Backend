@@ -14,10 +14,16 @@ namespace WebStore.Persistence.EntityConfigurations
                 .HasColumnType("datetime2(0)")
                 .HasDefaultValueSql("(sysutcdatetime())");
 
+            builder.Property(x => x.Buyer)
+                .HasMaxLength(100);
+
+            builder.Property(x => x.OnlineStoreDomainRegion)
+                .IsRequired(false)
+                .HasMaxLength(55);
+
             builder.HasMany(x => x.Products)
                 .WithOne(x => x.Basket)
                 .HasForeignKey(x => x.BasketId)
-                .IsRequired(false)
                 .OnDelete(DeleteBehavior.ClientSetNull);
         }
     }

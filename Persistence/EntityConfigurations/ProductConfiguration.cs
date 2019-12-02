@@ -16,6 +16,14 @@ namespace WebStore.Persistence.EntityConfigurations
 
             builder.Property(x => x.Description)
                 .HasMaxLength(255);
+
+            builder.Property(x => x.UnitPrice)
+                .HasColumnType("decimal(5,2)");
+
+            builder.Property(x => x.Category)
+                .IsRequired()
+                .HasMaxLength(50);
+            
         }
     }
 }
